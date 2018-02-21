@@ -69,9 +69,9 @@ namespace ConsoleApp1
 				result.Add(blocked);
 			}
 			// додавання останнього проміжку часу
-			if (maxDate > result.Last()[1])
+			if (maxDate > inputOrdered.Last()[1])
 			{
-				DateTime[] last = { result.Last()[1], maxDate };
+				DateTime[] last = { inputOrdered.Last()[1].AddDays(1), maxDate };
 				result.Add(last);
 			}
 			return result.ToArray();
